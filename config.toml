@@ -1,7 +1,7 @@
 baseurl = "https://luisnovaa.github.io"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
-title = "Green&Novo"
+title = "Luis Nova's blog2"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsStyle = "trac"
@@ -17,7 +17,7 @@ pygmentsCodefencesGuessSyntax = true
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
   subtitle = '"GO GREEN, there is not planet B"'
   mainSections = ["post","posts"]
-  logo = "img/web-principal2" # Expecting square dimensions
+  logo = "img/stock-market-getty-images.jpeg" # Expecting square dimensions
   favicon = "img/stock_market_getty_images_29B_icon.ico"
   dateFormat = "January 2, 2006"
   commit = false
