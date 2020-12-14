@@ -1,109 +1,124 @@
-baseurl = "https://luisnovaa.github.io"
-DefaultContentLanguage = "en"
-#DefaultContentLanguage = "ja"
-title = "Luis Nova's blog2"
-theme = "beautifulhugo"
-metaDataFormat = "yaml"
-pygmentsStyle = "trac"
-pygmentsUseClasses = true
-pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
-#pygmentsUseClassic = true
-#pygmentOptions = "linenos=inline"
-#disqusShortname = "XXX"
-#googleAnalytics = "XXX"
+  # baseurl = "https://zhaohuabing.com"
+title = "Luis Nova's Blog"
+theme = "hugo-theme-cleanwhite"
+languageCode = "en-us"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+googleAnalytics = ""
+preserveTaxonomyNames = true
+paginate = 5 #frontpage pagination
+hasCJKLanguage = true
 
-[Params]
-#  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
-  subtitle = '"GO GREEN, there is not planet B"'
-  mainSections = ["post","posts"]
-  logo = "img/stock-market-getty-images.jpeg" # Expecting square dimensions
-  favicon = "img/stock_market_getty_images_29B_icon.ico"
-  dateFormat = "January 2, 2006"
-  commit = false
-  rss = true
-  comments = true
-  readingTime = true
-  wordCount = true
-  useHLJS = true
-  socialShare = true
-  delayDisqus = true
-  showRelatedPosts = true
-#  hideAuthor = true
-#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
 
-#[[Params.bigimg]]
-#  src = "img/triangle.jpg"
-#  desc = "Triangle"
-#[[Params.bigimg]]
-#  src = "img/sphere.jpg"
-#  desc = "Sphere"
-#  # position: see values of CSS background-position.
-#  position = "center top"
-#[[Params.bigimg]]
-#  src = "img/hexagon.jpg"
-#  desc = "Hexagon"
+[params]
+  header_image = "img/beach.jpeg"
+  SEOTitle = "Luis Nova's Blog"
+  description = "赵化冰，程序员, 开源爱好者，生活探险家 | 这里是 赵化冰 的博客，与你一起发现更大的世界。"
+  # keyword = "赵化冰, zhaohuabing, Zhaohuabing, , 赵化冰的网络日志, 赵化冰的博客, Zhaohuabing Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice"
+  slogan = "Technology,the science behind the future..."
 
-[Author]
-  name = "Luis Nova"
-  website = "lhnova.com"
-  email = "hernando0018@.com"
-  # facebook = "username"
-  github = "luisnovaa"
-  # gitlab = "username"
-  # bitbucket = "username"
-  # twitter = "username"
-  # reddit = "username"
-  linkedin = "username"
-  # xing = "username"
-  # stackoverflow = "users/XXXXXXX/username"
-  # snapchat = "username"
-  # instagram = "username"
-  # youtube = "user/username" # or channel/channelname
-  # soundcloud = "username"
-  # spotify = "username"
-  # bandcamp = "username"
-  # itchio = "username"
-  # vk = "username"
-  # paypal = "username"
-  # telegram = "username"
-  # 500px = "username"
-  # codepen = "username"
-  # mastodon = "url"
-  # kaggle = "username"
-  # weibo = "username"
-  # slack = "username"
+  image_404 = "img/404-bg.jpg"
+  title_404 = "你来到了没有知识的荒原 :("
+  omit_categories = false
 
-[[menu.main]]
-    name = "Blog"
-    url = ""
-    weight = 1
+  # leancloud storage for page view counter
+  page_view_conter = false
+  leancloud_app_id = ""
+  leancloud_app_key = ""
 
-[[menu.main]]
-    name = "about"
-    url = "about/about-my-site"
-    weight = 3
+  # algolia site search
+  algolia_search = true
+  algolia_appId = ""
+  algolia_indexName = ""
+  algolia_apiKey = ""
 
-[[menu.main]]
-    identifier = "more information"
-    name = "more information"
-    url = "more-information/more-information-my-site"
-    weight = 2
+  # Sidebar settings
+  sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
+  #sidebar_avatar = "img/avatar-zhaohuabing.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
+  sidebar_avatar = "img/IPHONE.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
-[[menu.main]]
-    parent = "samples"
-    name = "Big Image Sample"
-    url = "samples/samples-my-site"
-    weight = 1
+  featured_tags = true
+  featured_condition_size = 1
 
-[[menu.main]]
-    parent = "samples"
-    name = "Math Sample"
-    url = "samples/samples-my-site2"
-    weight = 2
+  # Baidu Analytics
+  ba_track_id = ""
 
-[[menu.main]]
-    parent = "samples"
-    name = "Code Sample"
-    url = "samples/2017-03-05-math-sample"
-    weight = 3
+  # We need a proxy to access Disqus api in China
+  # Follow https://github.com/zhaohuabing/disqus-php-api to set up your own disqus proxy
+  disqus_proxy = ""
+  disqus_site = ""
+
+  #Enable wechat pay & alipay to allow readers send reward money if they like the articles
+  reward = false
+  # reward_guide = "如果这篇文章对你有用,请随意打赏"
+
+  friends = true
+  bookmarks = false
+  about_me = true
+
+  # Include any custom CSS and/or JS files, url or relative to /static folder
+  #custom_css = ["css/lightbox.css", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css", "css/main.css"]
+  #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
+
+  [params.social]
+  rss            = true
+  email          = "luisnovafcuis123@gmail.com"
+  #facebook      = "full profile url in facebook"
+  #googleplus    = "full profile url in googleplus"
+  twitter       = "https://twitter.com/lhnovaa"
+  linkedin       = "https://www.linkedin.com/in/luis-nova-b56a571b5/"
+  #stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
+  #instagram     = "full profile url in instagram"
+  github         = "https://github.com/Luisnovaa"
+  #wechat         = "your wechat qr code image"
+#  medium         = "full profile url in medium"
+  #pinterest     = "full profile url in pinterest"
+  #reddit        = "full profile url in reddit"
+  #gitlab        = "full profile url in gitlab"
+  #mastodon      = "full profile url in mastodon"
+  #keybase       = "full profile url in keybase"
+  #xing          = "https://www.xing.com/profile/yourxingid"
+  #git           = "full profile url for git user"
+
+  [[params.friend_link]]
+  title = "Luis Nova"
+  href =  "https://www.linkedin.com/in/luis-nova-b56a571b5/"
+
+  [[params.bookmark_link]]
+  title =  "Martin Fowler"
+  href =  "https://martinfowler.com"
+  [[params.bookmark_link]]
+  title = "ServiceMesher"
+  href =  "http://www.servicemesher.com"
+  [[params.bookmark_link]]
+  title =  "Pxhere"
+  href = "https://pxhere.com"
+  [[params.bookmark_link]]
+  title = "unsplash"
+  href = "https://unsplash.com"
+
+  # [[params.addtional_menus]]
+  # title =  "BOOKS"
+  # href =  "/top/books/"
+  [[params.addtional_menus]]
+  title =  "ABOUT"
+  href =  "/content/about/"
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["categories", "tags"]
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    startLevel = 1
+  [markup.highlight]
+    style = "dracula"
